@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap");
 /*! bulma.io v0.9.0 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {
@@ -279,7 +279,7 @@ button,
 input,
 select,
 textarea {
-  font-family: "Mulish"; }
+  font-family: "Slabo 27px"; }
 
 code,
 pre {
@@ -6575,13 +6575,13 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   font-weight: 700 !important; }
 
 .is-family-primary {
-  font-family: "Mulish" !important; }
+  font-family: "Slabo 27px" !important; }
 
 .is-family-secondary {
-  font-family: "Mulish" !important; }
+  font-family: "Slabo 27px" !important; }
 
 .is-family-sans-serif {
-  font-family: "Mulish" !important; }
+  font-family: "Slabo 27px" !important; }
 
 .is-family-monospace {
   font-family: monospace !important; }
