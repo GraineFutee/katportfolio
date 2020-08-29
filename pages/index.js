@@ -1,10 +1,12 @@
 import Head from "next/head";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 import SectionHeader from "../components/SectionHeader";
 import SectionBody from "../components/SectionBody";
 
 export default function Home() {
+  const [resumeIsvisible, setResumeIsvisible] = useState(false);
   return (
     <div>
       <Head>
@@ -14,13 +16,12 @@ export default function Home() {
 
       <main>
         <motion.section
-          animate={{ backgroundSize: ["120%", "100%", "120%"] }}
-          transition={{ type: "spring", duration: 40, loop: Infinity }}
+          // animate={{ backgroundSize: ["150%", "100%", "150%"] }}
+          // transition={{ type: "spring", duration: 80, loop: Infinity }}
           className="hero is-large is-dark"
           style={{
             background: "transparent url(/hero.jpg) center center no-repeat",
-            backgroundSize: "100%",
-            backgroundAttachment: "fixed",
+            backgroundSize: "cover",
           }}
         >
           <div style={{ backgroundColor: "rgba(30, 39, 46,0.3)" }}>
@@ -34,10 +35,175 @@ export default function Home() {
         </motion.section>
         <SectionHeader title="About StrandbergLegal" />
         <SectionBody>
-          <p className="is-size-5">
+          <p className="is-size-4">
             StrandbergLegal is a Stockholm based consultancy firm focusing on
             business law, investments, M&A and commercial law.
           </p>
+          <div>
+            <div onClick={() => setResumeIsvisible(!resumeIsvisible)}>
+              <div className="columns is-mobile">
+                <div className="column">
+                  <p className="is-size-4">Katarina Strandberg</p>
+                </div>
+                <div className="column">
+                  <p className="is-size-6 my-0 has-text-left">
+                    Business lawyer/business development
+                  </p>
+                  <p className="is-size-7 my-0 has-text-left">
+                    <i className="fas fa-phone" /> &nbsp; +46 (0)76 375 03 36
+                  </p>
+                  <p className="is-size-7 my-0 has-text-left">
+                    <i className="fas fa-envelope" /> &nbsp;
+                    katarina.strandberg@strandberglegal.se
+                  </p>
+                </div>
+              </div>
+              <p className="is-size-5">
+                Business lawyer specialized in Business Development, Corporate
+                Governance, Fundraising and Mergers & Acquisitions, Investments
+                and Management Incentives. Advisor to Start-Ups, Venture
+                Capitalists and managements. Experience also includes being
+                appointed as expert in legislative work under the Swedish
+                Minister of Financial Markets and having lecturing assignments
+                at Swedish universities, as well as international assignments
+                for e.g. the Swedish-American Chamber of Commerce in New York.
+                Katarina also serves as board member on formal boards and
+                advisory boards and functions as CEO at The Swedish Villa.
+              </p>
+            </div>
+
+            <motion.div
+              initial={{ maxHeight: 0, opacity: 0 }}
+              animate={
+                resumeIsvisible
+                  ? { maxHeight: 2000, opacity: 1 }
+                  : { maxHeight: 0, opacity: 0 }
+              }
+              transition={{ ease: "easeInOut" }}
+            >
+              <hr />
+
+              <p className="heading is-size-4">experience in selection</p>
+              <div className="columns">
+                <div className="column">
+                  <p className="heading is-size-5">Carrer</p>
+                  <div className="content has-text-left">
+                    <p className="title is-5">Present</p>
+                    <p className="title is-5">2017-nu</p>
+                    <ul>
+                      <li>
+                        StrandbergLegal AB, Business Lawyer & Senior Legal
+                        Consultant
+                      </li>
+                    </ul>
+                    <p className="title is-5">2019-nu</p>
+                    <ul>
+                      <li>The Swedish Villa, CEO, co-founder</li>
+                    </ul>
+                    <p className="title is-5">Tidigare</p>
+                    <ul>
+                      <li>PwC Sweden, Senior Manager Financial Services</li>
+                      <li>SVCA, Senior Legal Counsel</li>
+                      <li>Adminstrative Court of Justice, Tingsnotarie </li>
+                      <li>Mannheimer Swartling, biträdande jurist </li>
+                      <li>
+                        Juristutbildningen, University of Stockholm, Lärare
+                        associationsrätt, handledare, examinator och doktorand
+                        inom legala strukturer för investeringsfonder{" "}
+                      </li>
+                      <li>
+                        Juristutbildningen, Uppsala University, Föreläsare
+                        finansrätt
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="is-divider-vertical"></div>
+                <div className="column">
+                  <p className="heading is-size-5">Förordnanden</p>
+                  <div className="content has-text-left">
+                    <p className="title is-5">Nuvarande</p>
+                    <ul>
+                      <li>
+                        International Partner, Sweden i World Business Angel
+                        Investment Forum
+                      </li>
+                      <li>Professional Board Member</li>
+                      <li>
+                        Member of the Advisory Board för “Impact Track” focus
+                        Sustainability, Swedish-American Chamber of Commerce,
+                        New York
+                      </li>
+                      <li>Advisor Venture Capital and Business Angels </li>
+                    </ul>
+                    <p className="title is-5">Tidigare</p>
+                    <ul>
+                      <li>Member i Invest Europes regulatoriska grupp</li>
+                      <li>Representative vid Svenska Fondföreningen </li>
+                      <li>
+                        Representative SVCA (drivande i Skatt och Regulatoriska
+                        kommitteen)
+                      </li>
+                      <li>
+                        Expert legislative work (En konkurrenskraftig
+                        fondlagstiftning), apointed by the Swedish Minister of
+                        Markets and Finance Per Bolund
+                      </li>
+                      <li>
+                        Member of the financial Service Group by the Swedish
+                        Centre for Commercial Law Stockholms Universitet{" "}
+                      </li>
+                      <li>
+                        Listed as ”2018 Super Talent” within Finance by Veckans
+                        Affärer
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="is-divider"></div>
+              <div className="columns mb-4">
+                <div className="column">
+                  <p className="heading is-size-5">Utbildning</p>
+                  <div className="content has-text-left">
+                    <ul>
+                      <li>Jur. kand., Stockholms Universitet </li>
+                      <li>
+                        Research student, Juristutbildningen Stockholms
+                        univeristet
+                      </li>
+                      <li>Ad hoc courses in Psychology and finance</li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="is-divider-vertical"></div>
+                <div className="column">
+                  <p className="heading is-size-5">Framträdanden i urval</p>
+                  <div className="content has-text-left">
+                    <ul>
+                      <li>
+                        Talare Almedalen – Swedish Venture Capital and Private
+                        Equity Association
+                      </li>
+                      <li>
+                        Talare Svensk-Amerikanska Handelskammaren i New York{" "}
+                      </li>
+                      <li>Paneldeltagare, Global Fashioninnovation Talks</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <hr className="my-0" />
+            <motion.button
+              animate={{ rotate: resumeIsvisible ? 180 : 0 }}
+              className="button is-rounded is-small is-dark my-1"
+              onClick={() => setResumeIsvisible(!resumeIsvisible)}
+            >
+              <i className="fas fa-sort-down my-0" />
+            </motion.button>
+          </div>
         </SectionBody>
         <SectionHeader title="Practice areas" />
         <SectionBody>
@@ -112,7 +278,29 @@ export default function Home() {
         </SectionBody>
       </main>
 
-      <footer></footer>
+      <footer className="hero is-dark">
+        <div className="hero-body">
+          <div className="container has-text-centered">
+            <p className="is-size-5 my-0">
+              <i className="fas fa-map-marker-alt" /> &nbsp; 8901 Marmora Road,
+              <br></br> Glasgow, D04 89GR
+            </p>
+            <p className="is-size-5 my-0">
+              <i className="fas fa-phone" /> &nbsp; +46 (0)76 375 03 36
+            </p>
+            <p className="is-size-5 my-0">
+              <i className="fas fa-envelope" /> &nbsp;
+              katarina.strandberg@strandberglegal.se
+            </p>
+            <p className="is-size-4 my-0">
+              <i className="fab fa-instagram" />
+              &nbsp; &nbsp;
+              <i className="fab fa-linkedin" />
+            </p>
+            <p className="is-size-6 my-0">&#169; &nbsp; Katarina Strandberg</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

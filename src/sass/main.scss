@@ -56,8 +56,9 @@ $gap: 256px;
 // $navbar-item-color: #ffffff;
 // Import only what you need from Bulma
 @import "../../node_modules/bulma/bulma.sass";
-@import "../../node_modules/bulma-steps-component/bulma-steps.sass";
-@import "../../node_modules/bulma-extensions/bulma-checkradio/dist/css/bulma-checkradio.sass";
-@import "../../node_modules/bulma-extensions/bulma-calendar/src/sass/index.sass";
-@import "../../node_modules/bulma-extensions/bulma-calendar/src/sass/timepicker.sass";
-@import "../../node_modules/bulma-extensions/bulma-switch/src/sass/index.sass";
+// @import "../../node_modules/bulma-steps-component/bulma-steps.sass";
+// @import "../../node_modules/bulma-extensions/bulma-checkradio/dist/css/bulma-checkradio.sass";
+// @import "../../node_modules/bulma-extensions/bulma-calendar/src/sass/index.sass";
+// @import "../../node_modules/bulma-extensions/bulma-calendar/src/sass/timepicker.sass";
+// @import "../../node_modules/bulma-extensions/bulma-switch/src/sass/index.sass";
+@import "../../node_modules/bulma-extensions/bulma-divider/src/sass/index.sass";
