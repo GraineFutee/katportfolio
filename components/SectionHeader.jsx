@@ -3,6 +3,7 @@ import React from "react";
 export default function SectionHeader(props) {
   return (
     <section
+      id={props.id ? props.id : ""}
       className="hero is-dark"
       // style={{
       //   background: "transparent url(/headerBg.jpg) center center no-repeat",

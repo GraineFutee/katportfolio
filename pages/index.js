@@ -10,6 +10,7 @@ export default function Home() {
   const [bg, setBg] = useState(1);
   const [bg2, setBg2] = useState(2);
   const [activeBg, setActiveBg] = useState(1);
+  const [burgerActive, setBurgerActive] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -29,6 +30,7 @@ export default function Home() {
 
       <main>
         <motion.section
+          id="home"
           // animate={{ backgroundSize: ["120%", "100%", "120%"] }}
           // transition={{ type: "spring", duration: 80, loop: Infinity }}
           className="hero is-dark is-large"
@@ -65,6 +67,62 @@ export default function Home() {
             }}
             className="is-overlay"
           >
+            <nav
+              className="navbar is-fixed-top"
+              style={{ backgroundColor: "rgba(30, 39, 46,0.5)" }}
+            >
+              <div className="navbar-brand">
+                <a className="navbar-item is-size-5" href="#home">
+                  StrandbergLegal
+                </a>
+
+                <a
+                  role="button"
+                  className="navbar-burger burger"
+                  aria-label="menu"
+                  aria-expanded="false"
+                  data-target="StranbergLegalNavbar"
+                  onClick={() => setBurgerActive(!burgerActive)}
+                >
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                </a>
+              </div>
+              <div
+                id="StranbergLegalNavbar"
+                className={`navbar-menu ${burgerActive && "is-active"}`}
+              >
+                <a
+                  className="navbar-item is-size-5"
+                  href="#about"
+                  onClick={() => setBurgerActive(!burgerActive)}
+                >
+                  About
+                </a>
+                <a
+                  className="navbar-item is-size-5"
+                  href="#areas"
+                  onClick={() => setBurgerActive(!burgerActive)}
+                >
+                  Practice areas
+                </a>
+                <a
+                  className="navbar-item is-size-5"
+                  href="#bulletin"
+                  onClick={() => setBurgerActive(!burgerActive)}
+                >
+                  Bulletin
+                </a>
+                <a
+                  className="navbar-item is-size-5"
+                  href="#contact"
+                  onClick={() => setBurgerActive(!burgerActive)}
+                >
+                  Contact
+                </a>
+              </div>
+            </nav>
             <div className="hero-body my-6">
               <motion.div
                 className="container has-text-centered"
@@ -78,7 +136,7 @@ export default function Home() {
             </div>
           </div>
         </motion.section>
-        <SectionHeader title="About StrandbergLegal" />
+        <SectionHeader title="About StrandbergLegal" id="about" />
         <SectionBody>
           <p className="is-size-4">
             StrandbergLegal is a Stockholm based consultancy firm focusing on
@@ -269,7 +327,7 @@ export default function Home() {
             </motion.button>
           </div>
         </SectionBody>
-        <SectionHeader title="Practice areas" />
+        <SectionHeader title="Practice areas" id="areas" />
         <SectionBody>
           <div className="columns">
             <div className="column is-3"></div>
@@ -308,7 +366,7 @@ export default function Home() {
             <div className="column is-3"></div>
           </div>
         </SectionBody>
-        <SectionHeader title="Bulletin" />
+        <SectionHeader title="Bulletin" id="bulletin" />
         <SectionBody>
           <motion.div whileHover={{ x: 80 }}>
             <a
@@ -352,22 +410,23 @@ export default function Home() {
             </a>
           </motion.div>
         </SectionBody>
-        <SectionHeader title="Contact" />
+        <SectionHeader title="Contact" id="contact" />
         <SectionBody>
           <div className="columns">
             <div className="column">
               <div className="content has-text-left">
                 <p className="title">
-                  Send a message to tell us, ask us and book a metting
+                  Send a message to tell us about you and book a metting
                 </p>
                 <p className="subtitle">
-                  Just fill in the form below and we ar good to go
+                  Just fill in the form below and we are good to go
                 </p>
               </div>
-              <form action="">
+              <form name="contact" netlify>
                 <div className="field">
                   <div className="control">
                     <input
+                      name="name"
                       className="input"
                       type="text"
                       placeholder="Your name"
@@ -377,6 +436,7 @@ export default function Home() {
                 <div className="field">
                   <div className="control">
                     <input
+                      name="email"
                       className="input"
                       type="email"
                       placeholder="Your email"
@@ -386,13 +446,14 @@ export default function Home() {
                 <div className="field">
                   <div className="control">
                     <textarea
+                      name="message"
                       className="textarea"
                       placeholder="Your message"
                     ></textarea>
                   </div>
                 </div>
                 <div className="control">
-                  <button className="button is-dark is-fullwidth">
+                  <button type="submit" className="button is-dark is-fullwidth">
                     <i className="fab fa-telegram-plane" /> &nbsp; Send
                   </button>
                 </div>
@@ -403,10 +464,10 @@ export default function Home() {
               <div className="content is-size-5 has-text-left">
                 <p>
                   We would love to here all about your situation and what
-                  oppertunities and what challanges you are facing. In an
-                  initial contract we will be able to frame your challanegs, and
-                  set the scope. Or, if you have any thoughts or questions, send
-                  us a line or two and we will try to enlighten you.
+                  oppertunities and challenges you are facing. In an initial
+                  contract we will be able to frame your challenges, and set the
+                  scope. Or, if you have any thoughts or questions, send us a
+                  line or two and we will try to enlighten you.
                 </p>
                 <p>You can also send an email directly to</p>
                 <p>katarina.strandberg@strandberglegal.se</p>
