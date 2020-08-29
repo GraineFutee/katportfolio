@@ -1,8 +1,8 @@
 @charset "utf-8";
 
 // Import a Google Font
-// @import url("https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 //   @import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
 
 // Set your brand colors
@@ -12,7 +12,7 @@ $red: #ef5777;
 $blue: #4bcffa;
 $grey: #2f3640;
 $indigo: #575fcf;
-$beige: #c6a161;
+$beige: #7f8fa6;
 
 // // Update Bulma's global variables
 $dark: $grey;
@@ -25,7 +25,7 @@ $info: $blue;
 $info-invert: #ffffff;
 $primary: $beige;
 $primary-invert: #ffffff;
-$family-sans-serif: "Playfair Display";
+$family-sans-serif: "Oswald";
 
 $gap: 256px;
 // $grey-dark: $brown;

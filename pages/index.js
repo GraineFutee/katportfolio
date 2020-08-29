@@ -72,13 +72,15 @@ export default function Home() {
               style={{ backgroundColor: "rgba(30, 39, 46,0.5)" }}
             >
               <div className="navbar-brand">
-                <a className="navbar-item is-size-5" href="#home">
+                <a className="navbar-item is-size-6" href="#home">
                   StrandbergLegal
                 </a>
 
                 <a
                   role="button"
-                  className="navbar-burger burger"
+                  className={`navbar-burger burger has-text-white ${
+                    burgerActive && "is-active"
+                  }`}
                   aria-label="menu"
                   aria-expanded="false"
                   data-target="StranbergLegalNavbar"
@@ -94,28 +96,28 @@ export default function Home() {
                 className={`navbar-menu ${burgerActive && "is-active"}`}
               >
                 <a
-                  className="navbar-item is-size-5"
+                  className="navbar-item is-size-6"
                   href="#about"
                   onClick={() => setBurgerActive(!burgerActive)}
                 >
                   About
                 </a>
                 <a
-                  className="navbar-item is-size-5"
+                  className="navbar-item is-size-6"
                   href="#areas"
                   onClick={() => setBurgerActive(!burgerActive)}
                 >
                   Practice areas
                 </a>
                 <a
-                  className="navbar-item is-size-5"
+                  className="navbar-item is-size-6"
                   href="#bulletin"
                   onClick={() => setBurgerActive(!burgerActive)}
                 >
                   Bulletin
                 </a>
                 <a
-                  className="navbar-item is-size-5"
+                  className="navbar-item is-size-6"
                   href="#contact"
                   onClick={() => setBurgerActive(!burgerActive)}
                 >
@@ -138,34 +140,39 @@ export default function Home() {
         </motion.section>
         <SectionHeader title="About StrandbergLegal" id="about" />
         <SectionBody>
-          <p className="is-size-4">
+          <p className="is-size-5">
             StrandbergLegal is a Stockholm based consultancy firm focusing on
             business law, investments, M&A and commercial law.
           </p>
           <hr />
           <div>
             <div onClick={() => setResumeIsvisible(!resumeIsvisible)}>
-              <div className="columns is-mobile">
-                <div className="column">
-                  <p className="is-size-4">Katarina Strandberg</p>
-                </div>
-                <div className="column">
-                  <p className="is-size-6 my-0 has-text-left">
-                    Business lawyer/business development
-                  </p>
-                  <p className="is-size-7 my-0 has-text-left">
-                    <i className="fas fa-phone" /> &nbsp; +46 (0)76 375 03 36
-                  </p>
-                  <p className="is-size-7 my-0 has-text-left">
-                    <i className="fas fa-envelope" /> &nbsp;
-                    katarina.strandberg@strandberglegal.se
-                  </p>
+              <div className="columns">
+                <div className="column is-half is-offset-one-quarter">
+                  <div className="columns">
+                    <div className="column">
+                      <p className="is-size-5">Katarina Strandberg</p>
+                    </div>
+                    <div className="column">
+                      <p className="is-size-6 my-0 has-text-left">
+                        Business lawyer/business development
+                      </p>
+                      <p className="is-size-7 my-0 has-text-left">
+                        <i className="fas fa-phone" /> &nbsp; +46
+                        (0)76 375 03 36
+                      </p>
+                      <p className="is-size-7 my-0 has-text-left">
+                        <i className="fas fa-envelope" /> &nbsp;
+                        katarina.strandberg@strandberglegal.se
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="columns">
-                <div className="column is-1"></div>
+                <div className="column is-2"></div>
                 <div className="column">
-                  <p className="is-size-5">
+                  <p className="is-size-6 has-text-left">
                     Business lawyer specialized in Business Development,
                     Corporate Governance, Fundraising and Mergers &
                     Acquisitions, Investments and Management Incentives. Advisor
@@ -184,180 +191,194 @@ export default function Home() {
                   <div
                     className="box"
                     style={{
-                      height: 450,
+                      height: 350,
                       background:
-                        "transparent url(/profil/6.jpg) center center no-repeat",
+                        "transparent url(/profil/6bw.jpg) center center no-repeat",
                       backgroundSize: "cover",
+                      borderRadius: 0,
                     }}
                   ></div>
                 </div>
-                <div className="column is-1"></div>
+                <div className="column is-2"></div>
               </div>
             </div>
             <motion.div
-              style={{ backgroundColor: "#d2dae2" }}
-              className="box mt-4"
+              className="mt-4"
               initial={{ maxHeight: 0, opacity: 0 }}
               animate={
                 resumeIsvisible
                   ? { maxHeight: 2300, opacity: 1 }
                   : { maxHeight: 0, opacity: 0 }
               }
-              transition={{ ease: "easeInOut" }}
+              transition={{ ease: "easeInOut", duration: 1 }}
             >
-              <p className="heading is-size-4">experience in selection</p>
               <div className="columns">
-                <div className="column">
-                  <p className="heading is-size-5">Carrer</p>
-                  <div className="content has-text-left">
-                    <p className="title is-5">Present</p>
-                    <p className="title is-5">2017-nu</p>
-                    <ul>
-                      <li>
-                        StrandbergLegal AB, Business Lawyer & Senior Legal
-                        Consultant
-                      </li>
-                    </ul>
-                    <p className="title is-5">2019-nu</p>
-                    <ul>
-                      <li>The Swedish Villa, CEO, co-founder</li>
-                    </ul>
-                    <p className="title is-5">Tidigare</p>
-                    <ul>
-                      <li>PwC Sweden, Senior Manager Financial Services</li>
-                      <li>SVCA, Senior Legal Counsel</li>
-                      <li>Adminstrative Court of Justice, Tingsnotarie </li>
-                      <li>Mannheimer Swartling, biträdande jurist </li>
-                      <li>
-                        Juristutbildningen, University of Stockholm, Lärare
-                        associationsrätt, handledare, examinator och doktorand
-                        inom legala strukturer för investeringsfonder{" "}
-                      </li>
-                      <li>
-                        Juristutbildningen, Uppsala University, Föreläsare
-                        finansrätt
-                      </li>
-                    </ul>
+                <div className="column is-1"></div>
+                <div className="column" style={{ backgroundColor: "#dcdde1" }}>
+                  <p className="heading is-size-5">experience in selection</p>
+                  <div className="columns">
+                    <div className="column">
+                      <p className="heading is-size-6">Carrer</p>
+                      <div className="content has-text-left">
+                        <p className="title is-6">Present</p>
+                        <p className="title is-6">2017-nu</p>
+                        <ul>
+                          <li>
+                            StrandbergLegal AB, Business Lawyer & Senior Legal
+                            Consultant
+                          </li>
+                        </ul>
+                        <p className="title is-6">2019-nu</p>
+                        <ul>
+                          <li>The Swedish Villa, CEO, co-founder</li>
+                        </ul>
+                        <p className="title is-6">Tidigare</p>
+                        <ul>
+                          <li>PwC Sweden, Senior Manager Financial Services</li>
+                          <li>SVCA, Senior Legal Counsel</li>
+                          <li>Adminstrative Court of Justice, Tingsnotarie </li>
+                          <li>Mannheimer Swartling, biträdande jurist </li>
+                          <li>
+                            Juristutbildningen, University of Stockholm, Lärare
+                            associationsrätt, handledare, examinator och
+                            doktorand inom legala strukturer för
+                            investeringsfonder{" "}
+                          </li>
+                          <li>
+                            Juristutbildningen, Uppsala University, Föreläsare
+                            finansrätt
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="is-divider-vertical"></div>
+                    <div className="column">
+                      <p className="heading is-size-6">Förordnanden</p>
+                      <div className="content has-text-left">
+                        <p className="title is-6">Nuvarande</p>
+                        <ul>
+                          <li>
+                            International Partner, Sweden i World Business Angel
+                            Investment Forum
+                          </li>
+                          <li>Professional Board Member</li>
+                          <li>
+                            Member of the Advisory Board för “Impact Track”
+                            focus Sustainability, Swedish-American Chamber of
+                            Commerce, New York
+                          </li>
+                          <li>Advisor Venture Capital and Business Angels </li>
+                        </ul>
+                        <p className="title is-6">Tidigare</p>
+                        <ul>
+                          <li>Member i Invest Europes regulatoriska grupp</li>
+                          <li>Representative vid Svenska Fondföreningen </li>
+                          <li>
+                            Representative SVCA (drivande i Skatt och
+                            Regulatoriska kommitteen)
+                          </li>
+                          <li>
+                            Expert legislative work (En konkurrenskraftig
+                            fondlagstiftning), apointed by the Swedish Minister
+                            of Markets and Finance Per Bolund
+                          </li>
+                          <li>
+                            Member of the financial Service Group by the Swedish
+                            Centre for Commercial Law Stockholms Universitet{" "}
+                          </li>
+                          <li>
+                            Listed as ”2018 Super Talent” within Finance by
+                            Veckans Affärer
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="is-divider"></div>
+                  <div className="columns mb-4">
+                    <div className="column">
+                      <p className="heading is-size-6">Utbildning</p>
+                      <div className="content has-text-left">
+                        <ul>
+                          <li>Jur. kand., Stockholms Universitet </li>
+                          <li>
+                            Research student, Juristutbildningen Stockholms
+                            univeristet
+                          </li>
+                          <li>Ad hoc courses in Psychology and finance</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="is-divider-vertical"></div>
+                    <div className="column">
+                      <p className="heading is-size-6">Framträdanden i urval</p>
+                      <div className="content has-text-left">
+                        <ul>
+                          <li>
+                            Talare Almedalen – Swedish Venture Capital and
+                            Private Equity Association
+                          </li>
+                          <li>
+                            Talare Svensk-Amerikanska Handelskammaren i New York{" "}
+                          </li>
+                          <li>
+                            Paneldeltagare, Global Fashioninnovation Talks
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div className="is-divider-vertical"></div>
-                <div className="column">
-                  <p className="heading is-size-5">Förordnanden</p>
-                  <div className="content has-text-left">
-                    <p className="title is-5">Nuvarande</p>
-                    <ul>
-                      <li>
-                        International Partner, Sweden i World Business Angel
-                        Investment Forum
-                      </li>
-                      <li>Professional Board Member</li>
-                      <li>
-                        Member of the Advisory Board för “Impact Track” focus
-                        Sustainability, Swedish-American Chamber of Commerce,
-                        New York
-                      </li>
-                      <li>Advisor Venture Capital and Business Angels </li>
-                    </ul>
-                    <p className="title is-5">Tidigare</p>
-                    <ul>
-                      <li>Member i Invest Europes regulatoriska grupp</li>
-                      <li>Representative vid Svenska Fondföreningen </li>
-                      <li>
-                        Representative SVCA (drivande i Skatt och Regulatoriska
-                        kommitteen)
-                      </li>
-                      <li>
-                        Expert legislative work (En konkurrenskraftig
-                        fondlagstiftning), apointed by the Swedish Minister of
-                        Markets and Finance Per Bolund
-                      </li>
-                      <li>
-                        Member of the financial Service Group by the Swedish
-                        Centre for Commercial Law Stockholms Universitet{" "}
-                      </li>
-                      <li>
-                        Listed as ”2018 Super Talent” within Finance by Veckans
-                        Affärer
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div className="is-divider"></div>
-              <div className="columns mb-4">
-                <div className="column">
-                  <p className="heading is-size-5">Utbildning</p>
-                  <div className="content has-text-left">
-                    <ul>
-                      <li>Jur. kand., Stockholms Universitet </li>
-                      <li>
-                        Research student, Juristutbildningen Stockholms
-                        univeristet
-                      </li>
-                      <li>Ad hoc courses in Psychology and finance</li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="is-divider-vertical"></div>
-                <div className="column">
-                  <p className="heading is-size-5">Framträdanden i urval</p>
-                  <div className="content has-text-left">
-                    <ul>
-                      <li>
-                        Talare Almedalen – Swedish Venture Capital and Private
-                        Equity Association
-                      </li>
-                      <li>
-                        Talare Svensk-Amerikanska Handelskammaren i New York{" "}
-                      </li>
-                      <li>Paneldeltagare, Global Fashioninnovation Talks</li>
-                    </ul>
-                  </div>
-                </div>
+                <div className="column is-1"></div>
               </div>
             </motion.div>
 
             <hr className="my-0" />
-            <motion.button
-              animate={{ rotate: resumeIsvisible ? 180 : 0 }}
+            <button
               className="button is-rounded is-small is-dark my-1"
               onClick={() => setResumeIsvisible(!resumeIsvisible)}
             >
-              <i className="fas fa-sort-down my-0" />
-            </motion.button>
+              <p>
+                More &nbsp;
+                <motion.i
+                  animate={{ rotate: resumeIsvisible ? 180 : 0 }}
+                  className="fas fa-sort-down my-0"
+                />
+              </p>
+            </button>
           </div>
         </SectionBody>
         <SectionHeader title="Practice areas" id="areas" />
-        <SectionBody>
+        <SectionBody bg="/bg/3.jpg">
           <div className="columns">
             <div className="column is-3"></div>
             <div className="column">
               <motion.div whileHover={{ scale: 1.75 }}>
-                <p className="heading is-size-5">Company law</p>
+                <p className="heading is-size-6">Company law</p>
                 <hr />
               </motion.div>
               <motion.div whileHover={{ scale: 1.75 }}>
-                <p className="heading is-size-5">Contract law</p>
+                <p className="heading is-size-6">Contract law</p>
                 <hr />
               </motion.div>
               <motion.div whileHover={{ scale: 1.75 }}>
-                <p className="heading is-size-5">Commercial law</p>
+                <p className="heading is-size-6">Commercial law</p>
                 <hr />
               </motion.div>
               <motion.div whileHover={{ scale: 1.75 }}>
-                <p className="heading is-size-5">Governance</p>
+                <p className="heading is-size-6">Governance</p>
                 <hr />
               </motion.div>
               <motion.div whileHover={{ scale: 1.75 }}>
-                <p className="heading is-size-5">Investments</p>
+                <p className="heading is-size-6">Investments</p>
                 <hr />
               </motion.div>
               <motion.div whileHover={{ scale: 1.75 }}>
-                <p className="heading is-size-5">Incentive programs</p>
+                <p className="heading is-size-6">Incentive programs</p>
                 <hr />
               </motion.div>
               <motion.div whileHover={{ scale: 1.75 }}>
-                <p className="heading is-size-5">
+                <p className="heading is-size-6">
                   Financial & regulatory (focus investment funds)
                 </p>
                 <hr />
@@ -374,7 +395,7 @@ export default function Home() {
               target="_blank"
               className="has-text-dark"
             >
-              <p className="heading is-size-5">
+              <p className="heading is-size-6">
                 Strandberg was appointed as International Partner representing
                 Sweden at World Business Angel Investment Forum
               </p>
@@ -382,14 +403,14 @@ export default function Home() {
             </a>
           </motion.div>
           <motion.div whileHover={{ x: 80 }}>
-            <p className="heading is-size-5">
+            <p className="heading is-size-6">
               The Swedish Villa is appointed as Creative Partner to Impact Track
               at the Swedish American Chamber of Commerce New York
             </p>
             <hr />
           </motion.div>
           <motion.div whileHover={{ x: 80 }}>
-            <p className="heading is-size-5">
+            <p className="heading is-size-6">
               Strandberg was requested to become columnist at Swedens largest
               trade journal for the FMCG/the food industry Butikstrender
             </p>
@@ -401,7 +422,7 @@ export default function Home() {
               target="_blank"
               className="has-text-dark"
             >
-              <p className="heading is-size-5">
+              <p className="heading is-size-6">
                 Strandberg was appointed as Head of Legal and Regulatory
                 Executive Committee under the Ethics and Standards of Excellence
                 Committee at World Business Angel Investment Forum
@@ -415,14 +436,19 @@ export default function Home() {
           <div className="columns">
             <div className="column">
               <div className="content has-text-left">
-                <p className="title">
+                <p className="title is-4">
                   Send a message to tell us about you and book a metting
                 </p>
-                <p className="subtitle">
+                <p className="subtitle is-6">
                   Just fill in the form below and we are good to go
                 </p>
               </div>
-              <form name="contact" method="POST" data-netlify="true">
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                className="mt-6"
+              >
                 <input type="hidden" name="form-name" value="contact" />
                 <div className="field">
                   <div className="control">
@@ -465,7 +491,7 @@ export default function Home() {
             </div>
             <div className="is-divider-vertical"></div>
             <div className="column">
-              <div className="content is-size-5 has-text-left">
+              <div className="content is-size-6 has-text-left">
                 <p>
                   We would love to here all about your situation and what
                   oppertunities and challenges you are facing. In an initial
@@ -473,10 +499,18 @@ export default function Home() {
                   scope. Or, if you have any thoughts or questions, send us a
                   line or two and we will try to enlighten you.
                 </p>
-                <p>You can also send an email directly to</p>
-                <p>katarina.strandberg@strandberglegal.se</p>
-                <p>if more convenient.</p>
+                <p>You can also send an email directly if more convenient.</p>
                 <p>Looking forward to hering from you!</p>
+                <div
+                  className="box"
+                  style={{
+                    height: 300,
+                    background:
+                      "transparent url(/contact.jpg) center center no-repeat",
+                    backgroundSize: "cover",
+                    borderRadius: 0,
+                  }}
+                ></div>
               </div>
             </div>
           </div>
@@ -493,10 +527,10 @@ export default function Home() {
                 </p>
               </div>
               <div className="column is-9-mobile is-6-tablet">
-                <p className="is-size-5 my-0 has-text-left">
+                <p className="is-size-6 my-0 has-text-left">
                   8901 Marmora Road,
                 </p>
-                <p className="is-size-5 my-0 has-text-left">
+                <p className="is-size-6 my-0 has-text-left">
                   Glasgow, D04 89GR
                 </p>
               </div>
@@ -508,7 +542,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="column is-9-mobile is-6-tablet">
-                <p className="is-size-5 my-0 has-text-left">
+                <p className="is-size-6 my-0 has-text-left">
                   +46 (0)76 375 03 36
                 </p>
               </div>
@@ -520,7 +554,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="column is-9-mobile is-6-tablet">
-                <p className="is-size-5 my-0 has-text-left">
+                <p className="is-size-6 my-0 has-text-left">
                   katarina.strandberg@ strandberglegal.se
                 </p>
               </div>
