@@ -422,11 +422,13 @@ export default function Home() {
                   Just fill in the form below and we are good to go
                 </p>
               </div>
-              <form name="contact" netlify>
+              <form name="contact" method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="contact" />
                 <div className="field">
                   <div className="control">
                     <input
                       name="name"
+                      id="name"
                       className="input"
                       type="text"
                       placeholder="Your name"
@@ -437,6 +439,7 @@ export default function Home() {
                   <div className="control">
                     <input
                       name="email"
+                      id="email"
                       className="input"
                       type="email"
                       placeholder="Your email"
@@ -447,6 +450,7 @@ export default function Home() {
                   <div className="control">
                     <textarea
                       name="message"
+                      id="message"
                       className="textarea"
                       placeholder="Your message"
                     ></textarea>
