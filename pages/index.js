@@ -355,33 +355,33 @@ export default function Home() {
             <div className="column">
               <motion.div whileHover={{ scale: 1.75 }}>
                 <p className="heading is-size-6">Company law</p>
-                <hr />
+                <hr className="mx-6" />
               </motion.div>
               <motion.div whileHover={{ scale: 1.75 }}>
                 <p className="heading is-size-6">Contract law</p>
-                <hr />
+                <hr className="mx-6" />
               </motion.div>
               <motion.div whileHover={{ scale: 1.75 }}>
                 <p className="heading is-size-6">Commercial law</p>
-                <hr />
+                <hr className="mx-6" />
               </motion.div>
               <motion.div whileHover={{ scale: 1.75 }}>
                 <p className="heading is-size-6">Governance</p>
-                <hr />
+                <hr className="mx-6" />
               </motion.div>
               <motion.div whileHover={{ scale: 1.75 }}>
                 <p className="heading is-size-6">Investments</p>
-                <hr />
+                <hr className="mx-6" />
               </motion.div>
               <motion.div whileHover={{ scale: 1.75 }}>
                 <p className="heading is-size-6">Incentive programs</p>
-                <hr />
+                <hr className="mx-6" />
               </motion.div>
               <motion.div whileHover={{ scale: 1.75 }}>
                 <p className="heading is-size-6">
                   Financial & regulatory (focus investment funds)
                 </p>
-                <hr />
+                <hr className="mx-6" />
               </motion.div>
             </div>
             <div className="column is-3"></div>

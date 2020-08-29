@@ -5,7 +5,7 @@ export default function SectionBody(props) {
     <>
       {props.bg ? (
         <section
-          className="section py-0 px-0"
+          className="section py-0"
           style={{
             background: `transparent url(${props.bg}) center center no-repeat`,
             backgroundSize: "cover",
