@@ -11,6 +11,7 @@ export default function Footer() {
                 <i className="fas fa-map-marker-alt" />
               </p>
             </div>
+            <div className="is-divider-vertical"></div>
             <div className="column is-9-mobile is-6-tablet">
               <p className="is-size-6 my-0 has-text-left">Danderydsgatan,</p>
               <p className="is-size-6 my-0 has-text-left">
@@ -24,6 +25,7 @@ export default function Footer() {
                 <i className="fas fa-phone" />
               </p>
             </div>
+            <div className="is-divider-vertical"></div>
             <div className="column is-9-mobile is-6-tablet">
               <p className="is-size-6 my-0 has-text-left">
                 +46 (0)76 375 03 36
@@ -36,6 +38,7 @@ export default function Footer() {
                 <i className="fas fa-envelope" />
               </p>
             </div>
+            <div className="is-divider-vertical"></div>
             <div className="column is-9-mobile is-6-tablet">
               <p className="is-size-6 my-0 has-text-left">
                 katarina.strandberg@ strandberglegal.se
@@ -60,7 +63,25 @@ export default function Footer() {
               <i className="fab fa-linkedin" />
             </a>
           </p>
-          <p className="is-size-6 my-0">&#169; &nbsp; Katarina Strandberg</p>
+          <p className="is-size-6 my-0">&#169; &nbsp; StrandbergLegal AB</p>
+          <p className="is-size-6">
+            Made by{" "}
+            <a
+              href="https://hopeful-liskov-a6991c.netlify.app/"
+              target="_blank"
+              className="has-text-white"
+            >
+              Pierre ASDRUBAL
+            </a>{" "}
+            /{" "}
+            <a
+              href="https://www.theswedishvilla.com/"
+              target="_blank"
+              className="has-text-white"
+            >
+              The Swedish Vila
+            </a>
+          </p>
         </div>
       </div>
     </footer>

@@ -1,6 +1,6 @@
 {
   "name": "katportfolio",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,6 +8,7 @@
     "start": "next start",
     "export": "next export"
   },
+  "author": "Pierre ASDRUBAL",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",
     "bulma": "^0.9.0",

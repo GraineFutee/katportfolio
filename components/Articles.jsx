@@ -267,8 +267,8 @@ export default function Articles() {
               what happens if you leave your job early? And for you offering the
               program – think about the attractiveness of the program and what
               behavior you want to drive. Do the terms (both overall and
-              specific KPIs (jargon explained below 😉)) really do the trick, or
-              is there a risk that they drive the wrong behaviors and/or miss
+              specific KPIs (jargon explained below)) really do the trick, or is
+              there a risk that they drive the wrong behaviors and/or miss
               important areas? One common mistake is to only focus on easier
               metrics such as short-term financial results, and not properly
               look at long-term issues – sustainability is an area that is often
@@ -282,7 +282,6 @@ export default function Articles() {
               incentive programs. Hopefully it gives you some insight into the
               structures and key issues that need to be addressed in relation to
               the programs (and some comfort as regards what is being discussed)
-              😊
             </p>
             <ol>
               <li>
@@ -584,7 +583,7 @@ export default function Articles() {
                   somewhat lower than if the user was “unsophisticated”. But
                   remember that its always a case-by-case test so there are no
                   binary answers beforehand for you to rely on – only good
-                  judgement 😊.
+                  judgement .
                 </p>
               </li>
               <li>
@@ -644,7 +643,7 @@ export default function Articles() {
                   any hashtags stating your sustainability profile that you want
                   to protect/control and that it can be used to distinguish you
                   and your offerings? Given the trends in this area it could be
-                  a shame if a competitor will possess the golden wording… 😉
+                  a shame if a competitor will possess the golden wording…
                 </p>
               </li>
             </ol>

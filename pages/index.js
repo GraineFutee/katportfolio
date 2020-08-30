@@ -19,9 +19,13 @@ export default function Website() {
   return (
     <div>
       <Head>
-        <title>StrandbergLegal AB</title>
+        <title>StrandbergLegal AB - Legal Consultancy Firm</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="StrandbergLegal is a Stockholm based consultancy firm focusing on business law, investments, M&A and commercial law."
+        />
       </Head>
 
       <main>

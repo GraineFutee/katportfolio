@@ -84,17 +84,17 @@ export default function About() {
                 <p className="heading is-size-5">experience in selection</p>
                 <div className="columns">
                   <div className="column">
-                    <p className="heading is-size-6">Carrer</p>
+                    <p className="heading is-size-6">Career</p>
                     <div className="content has-text-left">
                       <p className="title is-6">Present</p>
-                      <p className="title is-6">2017-nu</p>
+                      <p className="title is-6">2017-now</p>
                       <ul>
                         <li>
                           StrandbergLegal AB, Business Lawyer & Senior Legal
                           Consultant
                         </li>
                       </ul>
-                      <p className="title is-6">2019-nu</p>
+                      <p className="title is-6">2019-now</p>
                       <ul>
                         <li>The Swedish Villa, CEO, co-founder</li>
                       </ul>
@@ -127,7 +127,7 @@ export default function About() {
                         </li>
                         <li>Professional Board Member</li>
                         <li>
-                          Member of the Advisory Board för “Impact Track” focus
+                          Member of the Advisory Board for “Impact Track” focus
                           Sustainability, Swedish-American Chamber of Commerce,
                           New York
                         </li>
@@ -161,7 +161,7 @@ export default function About() {
                     <p className="heading is-size-6">Education</p>
                     <div className="content has-text-left">
                       <ul>
-                        <li>Jur. kand., Stockholms Universitet </li>
+                        <li>LL.M., Stockholms Universitet </li>
                         <li>
                           Research student, Juristutbildningen Stockholms
                           univeristet

@@ -5,12 +5,22 @@ export default function DropDownArticle(props) {
   return (
     <div>
       <motion.div
+        id={props.title}
         whileHover={{ x: 40 }}
-        onClick={() =>
+        href={`#${props.title}`}
+        onClick={() => {
           props.setVisibleArticle(
             props.visibleArticle === props.title ? "" : props.title
-          )
-        }
+          );
+          props.visibleArticle !== props.title &&
+            setTimeout(() => {
+              document.getElementById(props.title).scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+                inline: "nearest",
+              });
+            }, 500);
+        }}
       >
         <p className="heading is-size-5 has-text-left">
           {props.title} &nbsp;
