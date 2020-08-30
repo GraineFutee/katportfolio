@@ -15,10 +15,7 @@ export default function Website() {
       <Head>
         <title>StrandbergLegal AB</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="viewport"
-          content="width=device-width,initial-scale=1.0"
-        ></meta>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
       <main>
