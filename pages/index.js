@@ -10,6 +10,11 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
 export default function Website() {
+  let meta = document.createElement("meta");
+  meta.name = "viewport";
+  meta.content = "width=device-width,initial-scale=1.0";
+  document.getElementsByTagName("head")[0].appendChild(meta);
+
   return (
     <div>
       <Head>
