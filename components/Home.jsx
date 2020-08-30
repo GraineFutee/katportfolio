@@ -30,6 +30,7 @@ export default function Home() {
       // }}
     >
       <motion.div
+        className="is-hidden-mobile"
         animate={{ opacity: activeBg > 0 ? 1 : 0 }}
         transition={{ duration: 1 }}
         style={{
@@ -40,13 +41,35 @@ export default function Home() {
           zIndex: 3,
         }}
       ></motion.div>
+      <motion.div
+        className="is-hidden-tablet"
+        animate={{ opacity: activeBg > 0 ? 1 : 0 }}
+        transition={{ duration: 1 }}
+        style={{
+          height: "80vh",
+          background: `transparent url(/bg/${bg}.jpg) center center no-repeat`,
+          backgroundSize: "cover",
+          zIndex: 3,
+        }}
+      ></motion.div>
       <div
+        className="is-hidden-mobile"
         style={{
           marginTop: "-80vh",
           height: "80vh",
           background: `transparent url(/bg/${bg2}.jpg) center center no-repeat`,
           backgroundSize: "cover",
           backgroundAttachment: "fixed",
+          zIndex: 2,
+        }}
+      ></div>
+      <div
+        className="is-hidden-tablet"
+        style={{
+          marginTop: "-80vh",
+          height: "80vh",
+          background: `transparent url(/bg/${bg2}.jpg) center center no-repeat`,
+          backgroundSize: "cover",
           zIndex: 2,
         }}
       ></div>
