@@ -1,11 +1,8 @@
 import Head from "next/head";
 import React, { useEffect } from "react";
 
-import Home from "../components/Home";
-import About from "../components/About";
-import Areas from "../components/Areas";
-import Bulletin from "../components/Bulletin";
-import Contact from "../components/Contact";
+import Navbar from "../components/Navbar";
+import Articles from "../components/Articles";
 import Footer from "../components/Footer";
 
 export default function Website() {
@@ -25,11 +22,8 @@ export default function Website() {
       </Head>
 
       <main>
-        <Home />
-        <About />
-        <Areas />
-        <Bulletin />
-        <Contact />
+        <Navbar />
+        <Articles />
       </main>
       <Footer />
     </div>

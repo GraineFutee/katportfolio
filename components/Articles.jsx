@@ -9,7 +9,7 @@ export default function Articles() {
 
   return (
     <>
-      <SectionHeader title="Articles" id="artciles" />
+      <SectionHeader title="Articles" id="articles" />
       <SectionBody>
         <DropDownArticle
           title="Googled anyone today? What is there for everyone to see?"

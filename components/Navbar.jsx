@@ -9,7 +9,7 @@ export default function Navbar() {
       style={{ backgroundColor: "rgba(30, 39, 46,0.5)" }}
     >
       <div className="navbar-brand">
-        <a className="navbar-item is-size-6" href="#home">
+        <a className="navbar-item is-size-6" href="/#home">
           StrandbergLegal
         </a>
 
@@ -34,35 +34,35 @@ export default function Navbar() {
       >
         <a
           className="navbar-item is-size-6"
-          href="#about"
+          href="/#about"
           onClick={() => setBurgerActive(!burgerActive)}
         >
           About
         </a>
         <a
           className="navbar-item is-size-6"
-          href="#areas"
+          href="/#areas"
           onClick={() => setBurgerActive(!burgerActive)}
         >
           Practice areas
         </a>
         <a
           className="navbar-item is-size-6"
-          href="#bulletin"
+          href="/#bulletin"
           onClick={() => setBurgerActive(!burgerActive)}
         >
           Bulletin
         </a>
         <a
           className="navbar-item is-size-6"
-          href="#artciles"
+          href="/articles"
           onClick={() => setBurgerActive(!burgerActive)}
         >
           Articles
         </a>
         <a
           className="navbar-item is-size-6"
-          href="#contact"
+          href="/#contact"
           onClick={() => setBurgerActive(!burgerActive)}
         >
           Contact
