@@ -10,6 +10,7 @@ export default function SectionHeader(props) {
       //   backgroundSize: "cover",
       // }}
     >
+      {props.children}
       {/* <div style={{ backgroundColor: "rgba(30, 39, 46,0.8)" }}> */}
       <div className="hero-body">
         <div className="container has-text-centered">

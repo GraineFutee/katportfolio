@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+import Navbar from "./Navbar";
 import SectionHeader from "./SectionHeader";
 import SectionBody from "./SectionBody";
 import DropDownArticle from "./DropDownArticle";
@@ -9,7 +10,9 @@ export default function Articles() {
 
   return (
     <>
-      <SectionHeader title="Articles" id="articles" />
+      <SectionHeader title="Articles" id="articles">
+        <Navbar />
+      </SectionHeader>
       <SectionBody>
         <DropDownArticle
           title="Googled anyone today? What is there for everyone to see?"

@@ -11,6 +11,9 @@ export default function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveBg(activeBg * -1);
+      setTimeout(() => {
+        activeBg > 0 ? setBg(bg === 1 ? 3 : 1) : setBg2(bg2 === 2 ? 4 : 2);
+      }, 3000);
     }, 6000);
     return () => {
       clearInterval(interval);
@@ -35,7 +38,10 @@ export default function Home() {
         transition={{ duration: 1 }}
         style={{
           height: "80vh",
-          background: `transparent url(/bg/${bg}.jpg) center center no-repeat`,
+          backgroundImage: `url(/bg/${bg}.jpg)`,
+          backgroundColor: `transparent`,
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundAttachment: "fixed",
           zIndex: 3,
@@ -47,7 +53,10 @@ export default function Home() {
         transition={{ duration: 1 }}
         style={{
           height: "80vh",
-          background: `transparent url(/bg/${bg}.jpg) center center no-repeat`,
+          backgroundImage: `url(/bg/${bg}.jpg)`,
+          backgroundColor: `transparent`,
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           zIndex: 3,
         }}
@@ -57,8 +66,10 @@ export default function Home() {
         style={{
           marginTop: "-80vh",
           height: "80vh",
-          background: `transparent url(/bg/${bg2}.jpg) center center no-repeat`,
-          backgroundSize: "cover",
+          backgroundImage: `url(/bg/${bg2}.jpg)`,
+          backgroundColor: `transparent`,
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
           backgroundAttachment: "fixed",
           zIndex: 2,
         }}
@@ -68,7 +79,10 @@ export default function Home() {
         style={{
           marginTop: "-80vh",
           height: "80vh",
-          background: `transparent url(/bg/${bg2}.jpg) center center no-repeat`,
+          backgroundImage: `url(/bg/${bg2}.jpg)`,
+          backgroundColor: `transparent`,
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           zIndex: 2,
         }}

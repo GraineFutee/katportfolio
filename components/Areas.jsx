@@ -10,7 +10,7 @@ export default function Areas() {
   return (
     <>
       <SectionHeader title="Practice areas" id="areas" />
-      <SectionBody bg="/bg/3.jpg">
+      <SectionBody bg="/areas/2.jpg">
         <div className="columns">
           <div className="column is-3"></div>
           <div className="column">
