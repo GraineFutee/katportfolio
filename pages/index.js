@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React from "react";
+import React, { useEffect } from "react";
 
 import Home from "../components/Home";
 import About from "../components/About";
@@ -10,10 +10,12 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
 export default function Website() {
-  let meta = document.createElement("meta");
-  meta.name = "viewport";
-  meta.content = "width=device-width,initial-scale=1.0";
-  document.getElementsByTagName("head")[0].appendChild(meta);
+  useEffect(() => {
+    let meta = document.createElement("meta");
+    meta.name = "viewport";
+    meta.content = "width=device-width,initial-scale=1.0";
+    document.getElementsByTagName("head")[0].appendChild(meta);
+  }, []);
 
   return (
     <div>
