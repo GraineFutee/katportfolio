@@ -9,6 +9,7 @@ export default function SectionBody(props) {
           style={{
             background: `transparent url(${props.bg}) center center no-repeat`,
             backgroundSize: "cover",
+            backgroundAttachment: "fixed",
           }}
         >
           <div

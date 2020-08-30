@@ -4,9 +4,11 @@ import { motion } from "framer-motion";
 
 import SectionHeader from "../components/SectionHeader";
 import SectionBody from "../components/SectionBody";
+import DropDownArea from "../components/DropDownArea";
 
 export default function Home() {
   const [resumeIsvisible, setResumeIsvisible] = useState(false);
+  const [visibleArea, setVisibleArea] = useState("");
   const [bg, setBg] = useState(1);
   const [bg2, setBg2] = useState(2);
   const [activeBg, setActiveBg] = useState(1);
@@ -47,6 +49,7 @@ export default function Home() {
               height: "80vh",
               background: `transparent url(/bg/${bg}.jpg) center center no-repeat`,
               backgroundSize: "cover",
+              backgroundAttachment: "fixed",
               zIndex: 3,
             }}
           ></motion.div>
@@ -56,6 +59,7 @@ export default function Home() {
               height: "80vh",
               background: `transparent url(/bg/${bg2}.jpg) center center no-repeat`,
               backgroundSize: "cover",
+              backgroundAttachment: "fixed",
               zIndex: 2,
             }}
           ></div>
@@ -116,6 +120,13 @@ export default function Home() {
                 >
                   Bulletin
                 </a>
+                {/* <a
+                  className="navbar-item is-size-6"
+                  href="#artciles"
+                  onClick={() => setBurgerActive(!burgerActive)}
+                >
+                  Articles
+                </a> */}
                 <a
                   className="navbar-item is-size-6"
                   href="#contact"
@@ -133,7 +144,7 @@ export default function Home() {
                 transition={{ delay: 1 }}
               >
                 <h1 className="title is-2">StrandbergLegal AB</h1>
-                <p className="subtitle">Consultancy firm</p>
+                <p className="subtitle">Legal Consultancy Firm</p>
               </motion.div>
             </div>
           </div>
@@ -232,30 +243,28 @@ export default function Home() {
                         <ul>
                           <li>The Swedish Villa, CEO, co-founder</li>
                         </ul>
-                        <p className="title is-6">Tidigare</p>
+                        <p className="title is-6">Previous</p>
                         <ul>
                           <li>PwC Sweden, Senior Manager Financial Services</li>
                           <li>SVCA, Senior Legal Counsel</li>
-                          <li>Adminstrative Court of Justice, Tingsnotarie </li>
-                          <li>Mannheimer Swartling, biträdande jurist </li>
+                          <li>Adminstrative Court of Justice, Law Clerk </li>
+                          <li>Mannheimer Swartling</li>
                           <li>
-                            Juristutbildningen, University of Stockholm, Lärare
-                            associationsrätt, handledare, examinator och
-                            doktorand inom legala strukturer för
-                            investeringsfonder{" "}
+                            Law School, Stockholm University, Teacher company
+                            law, mentor, responsible for examinations
                           </li>
                           <li>
-                            Juristutbildningen, Uppsala University, Föreläsare
-                            finansrätt
+                            Law School, Uppsala University, Lecturer Financial
+                            regulation
                           </li>
                         </ul>
                       </div>
                     </div>
                     <div className="is-divider-vertical"></div>
                     <div className="column">
-                      <p className="heading is-size-6">Förordnanden</p>
+                      <p className="heading is-size-6">Appointments</p>
                       <div className="content has-text-left">
-                        <p className="title is-6">Nuvarande</p>
+                        <p className="title is-6">Present</p>
                         <ul>
                           <li>
                             International Partner, Sweden i World Business Angel
@@ -269,26 +278,23 @@ export default function Home() {
                           </li>
                           <li>Advisor Venture Capital and Business Angels </li>
                         </ul>
-                        <p className="title is-6">Tidigare</p>
+                        <p className="title is-6">Previous</p>
                         <ul>
-                          <li>Member i Invest Europes regulatoriska grupp</li>
-                          <li>Representative vid Svenska Fondföreningen </li>
-                          <li>
-                            Representative SVCA (drivande i Skatt och
-                            Regulatoriska kommitteen)
-                          </li>
+                          <li>Member Invest Europes regulatoriska grupp</li>
+                          <li>Representative at Svenska Fondföreningen </li>
+                          <li>Representative SVCA (Tax and Regulatory)</li>
                           <li>
                             Expert legislative work (En konkurrenskraftig
-                            fondlagstiftning), apointed by the Swedish Minister
+                            fondlagstiftning), appointed by the Swedish Minister
                             of Markets and Finance Per Bolund
                           </li>
                           <li>
-                            Member of the financial Service Group by the Swedish
-                            Centre for Commercial Law Stockholms Universitet{" "}
+                            Member of the Financial Service Group by the Swedish
+                            Centre for Commercial Law Stockholms Universitet
                           </li>
                           <li>
-                            Listed as ”2018 Super Talent” within Finance by
-                            Veckans Affärer
+                            Listed as ”Super Talent” 2018 within Finance by
+                            Swedish business magazine Veckans Affärer
                           </li>
                         </ul>
                       </div>
@@ -297,7 +303,7 @@ export default function Home() {
                   <div className="is-divider"></div>
                   <div className="columns mb-4">
                     <div className="column">
-                      <p className="heading is-size-6">Utbildning</p>
+                      <p className="heading is-size-6">Education</p>
                       <div className="content has-text-left">
                         <ul>
                           <li>Jur. kand., Stockholms Universitet </li>
@@ -306,23 +312,28 @@ export default function Home() {
                             univeristet
                           </li>
                           <li>Ad hoc courses in Psychology and finance</li>
+                          <li>Education personal trainer </li>
                         </ul>
                       </div>
                     </div>
                     <div className="is-divider-vertical"></div>
                     <div className="column">
-                      <p className="heading is-size-6">Framträdanden i urval</p>
+                      <p className="heading is-size-6">
+                        Some other preformances
+                      </p>
                       <div className="content has-text-left">
                         <ul>
                           <li>
-                            Talare Almedalen – Swedish Venture Capital and
+                            Speaker Almedalen – Swedish Venture Capital and
                             Private Equity Association
                           </li>
                           <li>
-                            Talare Svensk-Amerikanska Handelskammaren i New York{" "}
+                            Speaker Svensk-Amerikanska Handelskammaren i New
+                            York
                           </li>
                           <li>
-                            Paneldeltagare, Global Fashioninnovation Talks
+                            Speaker in panel, Global Fashioninnovation Talks
+                            2020
                           </li>
                         </ul>
                       </div>
@@ -353,36 +364,84 @@ export default function Home() {
           <div className="columns">
             <div className="column is-3"></div>
             <div className="column">
-              <motion.div whileHover={{ scale: 1.75 }}>
-                <p className="heading is-size-6">Company law</p>
-                <hr className="mx-6" />
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.75 }}>
-                <p className="heading is-size-6">Contract law</p>
-                <hr className="mx-6" />
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.75 }}>
-                <p className="heading is-size-6">Commercial law</p>
-                <hr className="mx-6" />
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.75 }}>
-                <p className="heading is-size-6">Governance</p>
-                <hr className="mx-6" />
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.75 }}>
-                <p className="heading is-size-6">Investments</p>
-                <hr className="mx-6" />
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.75 }}>
-                <p className="heading is-size-6">Incentive programs</p>
-                <hr className="mx-6" />
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.75 }}>
-                <p className="heading is-size-6">
-                  Financial & regulatory (focus investment funds)
+              <DropDownArea
+                title="Company law"
+                setVisibleArea={setVisibleArea}
+                visibleArea={visibleArea}
+              >
+                <p className="has-text-left" style={{ zIndex: 3 }}>
+                  Incorporation and registration, corporate governance including
+                  Board matters, as well as restructuring, new share issuing,
+                  constructing and negotiating Shareholders Agreements.
                 </p>
-                <hr className="mx-6" />
-              </motion.div>
+              </DropDownArea>
+              <DropDownArea
+                title="Contract law"
+                setVisibleArea={setVisibleArea}
+                visibleArea={visibleArea}
+              >
+                <p className="has-text-left" style={{ zIndex: 3 }}>
+                  Producing and negotiation of contracts, reviewing and
+                  assessing contract suggestions.
+                </p>
+              </DropDownArea>
+              <DropDownArea
+                title="Commercial law"
+                setVisibleArea={setVisibleArea}
+                visibleArea={visibleArea}
+              >
+                <p className="has-text-left" style={{ zIndex: 3 }}>
+                  Structuring and overseeing transactions between businesses,
+                  including matters such as advertising and marketing,
+                  collections, banking, contracts, negotiable instruments, and
+                  trade in general.
+                </p>
+              </DropDownArea>
+              <DropDownArea
+                title="Governance"
+                setVisibleArea={setVisibleArea}
+                visibleArea={visibleArea}
+              >
+                <p className="has-text-left" style={{ zIndex: 3 }}>
+                  Board work, strategic matters, work shops and education,
+                  policy documents and implementation of such.
+                </p>
+              </DropDownArea>
+              <DropDownArea
+                title="Investments"
+                setVisibleArea={setVisibleArea}
+                visibleArea={visibleArea}
+              >
+                <p className="has-text-left" style={{ zIndex: 3 }}>
+                  Structuring and overseeing investment rounds, facilitating and
+                  leading investments and managing deal flow and evaluations of
+                  investment memorandums.
+                </p>
+              </DropDownArea>
+              <DropDownArea
+                title="Incentive programs"
+                setVisibleArea={setVisibleArea}
+                visibleArea={visibleArea}
+              >
+                <p className="has-text-left" style={{ zIndex: 3 }}>
+                  Management incentive programs, short- and long term, including
+                  Stock options, Employee stock options and sweat equity deals.
+                  Structuring of KPI:s also in relation to regulated operations
+                  within Financial Services.
+                </p>
+              </DropDownArea>
+              <DropDownArea
+                title="Financial & Regulatory"
+                setVisibleArea={setVisibleArea}
+                visibleArea={visibleArea}
+              >
+                <p className="has-text-left" style={{ zIndex: 3 }}>
+                  Regulatory and governance issues related to UCITS and AIFMD
+                  regulated operations, also in relation to AML regulation and
+                  general correspondence and reporting in relation to the
+                  Swedish Financial Authorities and ESMA.
+                </p>
+              </DropDownArea>
             </div>
             <div className="column is-3"></div>
           </div>
@@ -391,46 +450,154 @@ export default function Home() {
         <SectionBody>
           <motion.div whileHover={{ x: 80 }}>
             <a
-              href="/WORLD BUSINESS ANGELS INVESTMENT FORUM.pdf"
+              href="https://poddtoppen.se/podcast/1161496999/lunchpodden-min-basta-ide/min-basta-ide-leila-falkenberg-och-katarina-strandberg-om-varfor-svenska-kreatorer-ager"
               target="_blank"
               className="has-text-dark"
             >
               <p className="heading is-size-6">
-                Strandberg was appointed as International Partner representing
-                Sweden at World Business Angel Investment Forum
+                Co-founders Leila Falkenberg & Katarina Strandberg was invited
+                as guests in Lunch-podden
               </p>
               <hr />
             </a>
           </motion.div>
           <motion.div whileHover={{ x: 80 }}>
-            <p className="heading is-size-6">
-              The Swedish Villa is appointed as Creative Partner to Impact Track
-              at the Swedish American Chamber of Commerce New York
-            </p>
-            <hr />
-          </motion.div>
-          <motion.div whileHover={{ x: 80 }}>
-            <p className="heading is-size-6">
-              Strandberg was requested to become columnist at Swedens largest
-              trade journal for the FMCG/the food industry Butikstrender
-            </p>
-            <hr />
-          </motion.div>
-          <motion.div whileHover={{ x: 80 }}>
             <a
-              href="/Ethical Response of WBAF to COVID-19.pdf"
+              href="https://www.ecruboxdigital.com/"
               target="_blank"
               className="has-text-dark"
             >
               <p className="heading is-size-6">
-                Strandberg was appointed as Head of Legal and Regulatory
-                Executive Committee under the Ethics and Standards of Excellence
-                Committee at World Business Angel Investment Forum
+                Strandberg was invited as expert to give her view of the future
+                of the fashion/retail market for a UK market-research
+              </p>
+              <hr />
+            </a>
+          </motion.div>
+          <motion.div whileHover={{ x: 80 }}>
+            <a
+              href="https://www.wbaforum.org/"
+              target="_blank"
+              className="has-text-dark"
+            >
+              <p className="heading is-size-6">
+                Strandberg to participate in the WBAF world congress in Istanbul
+              </p>
+              <hr />
+            </a>
+          </motion.div>
+          <motion.div whileHover={{ x: 80 }}>
+            <a
+              href="https://www.saccny.org/sustainology/"
+              target="_blank"
+              className="has-text-dark"
+            >
+              <p className="heading is-size-6">
+                Strandberg speaks on behalf of Social Entrepreneurship Forum at
+                Swedish-American Chamber of commerce Sustainology about the
+                connection between Sustanability in the food industry and
+                investments/profits
+              </p>
+              <hr />
+            </a>
+          </motion.div>
+          <motion.div whileHover={{ x: 80 }}>
+            <a
+              href="https://www.saccny.org/2020/02/12/saccny-ramps-up-its-sustainability-focus-with-impact-track-2020/"
+              target="_blank"
+              className="has-text-dark"
+            >
+              <p className="heading is-size-6">
+                Strandberg was appointed as Advisory Board Member for the Impact
+                track Swedish-American Chamber of Commerce New York
               </p>
               <hr />
             </a>
           </motion.div>
         </SectionBody>
+        {/* <SectionHeader title="Articles" id="artciles" />
+        <SectionBody>
+          <div className="columns">
+            <div className="column">
+              <div className="content has-text-left">
+                <p className="title is-4">
+                  Send a message to tell us about you and book a metting
+                </p>
+                <p className="subtitle is-6">
+                  Just fill in the form below and we are good to go
+                </p>
+              </div>
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                className="mt-6"
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                <div className="field">
+                  <div className="control">
+                    <input
+                      name="name"
+                      id="name"
+                      className="input"
+                      type="text"
+                      placeholder="Your name"
+                    />
+                  </div>
+                </div>
+                <div className="field">
+                  <div className="control">
+                    <input
+                      name="email"
+                      id="email"
+                      className="input"
+                      type="email"
+                      placeholder="Your email"
+                    />
+                  </div>
+                </div>
+                <div className="field">
+                  <div className="control">
+                    <textarea
+                      name="message"
+                      id="message"
+                      className="textarea"
+                      placeholder="Your message"
+                    ></textarea>
+                  </div>
+                </div>
+                <div className="control">
+                  <button type="submit" className="button is-dark is-fullwidth">
+                    <i className="fab fa-telegram-plane" /> &nbsp; Send
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div className="is-divider-vertical"></div>
+            <div className="column">
+              <div className="content is-size-6 has-text-left">
+                <p>
+                  We would love to here from you, what your situation is, as
+                  well as what opportunities and challenges you are facing. Or,
+                  if you have any thoughts or questions, send us a line or two
+                  and we get back to you within short.
+                </p>
+                <p>You can also send an email directly if more convenient.</p>
+                <p>Looking forward to hering from you!</p>
+                <div
+                  className="box"
+                  style={{
+                    height: 300,
+                    background:
+                      "transparent url(/contact.jpg) center center no-repeat",
+                    backgroundSize: "cover",
+                    borderRadius: 0,
+                  }}
+                ></div>
+              </div>
+            </div>
+          </div>
+        </SectionBody> */}
         <SectionHeader title="Contact" id="contact" />
         <SectionBody>
           <div className="columns">
@@ -493,11 +660,10 @@ export default function Home() {
             <div className="column">
               <div className="content is-size-6 has-text-left">
                 <p>
-                  We would love to here all about your situation and what
-                  oppertunities and challenges you are facing. In an initial
-                  contract we will be able to frame your challenges, and set the
-                  scope. Or, if you have any thoughts or questions, send us a
-                  line or two and we will try to enlighten you.
+                  We would love to here from you, what your situation is, as
+                  well as what opportunities and challenges you are facing. Or,
+                  if you have any thoughts or questions, send us a line or two
+                  and we get back to you within short.
                 </p>
                 <p>You can also send an email directly if more convenient.</p>
                 <p>Looking forward to hering from you!</p>
@@ -527,11 +693,9 @@ export default function Home() {
                 </p>
               </div>
               <div className="column is-9-mobile is-6-tablet">
+                <p className="is-size-6 my-0 has-text-left">Danderydsgatan,</p>
                 <p className="is-size-6 my-0 has-text-left">
-                  8901 Marmora Road,
-                </p>
-                <p className="is-size-6 my-0 has-text-left">
-                  Glasgow, D04 89GR
+                  28 114 26 Stockholm
                 </p>
               </div>
             </div>
