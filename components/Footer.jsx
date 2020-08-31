@@ -65,22 +65,24 @@ export default function Footer() {
           </p>
           <p className="is-size-6 my-0">&#169; &nbsp; StrandbergLegal AB</p>
           <p className="is-size-6">
-            Made by{" "}
-            <a
-              href="https://hopeful-liskov-a6991c.netlify.app/"
-              target="_blank"
-              className="has-text-white"
-            >
-              Pierre ASDRUBAL
-            </a>{" "}
-            /{" "}
-            <a
-              href="https://www.theswedishvilla.com/"
-              target="_blank"
-              className="has-text-white"
-            >
-              The Swedish Vila
-            </a>
+            <small>
+              Made by{" "}
+              <a
+                href="https://hopeful-liskov-a6991c.netlify.app/"
+                target="_blank"
+                className="has-text-white"
+              >
+                Pierre ASDRUBAL
+              </a>{" "}
+              /{" "}
+              <a
+                href="https://www.theswedishvilla.com/"
+                target="_blank"
+                className="has-text-white"
+              >
+                The Swedish Vila
+              </a>
+            </small>
           </p>
         </div>
       </div>

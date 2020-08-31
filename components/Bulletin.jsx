@@ -11,6 +11,33 @@ export default function Bulletin() {
       <SectionBody>
         <motion.div whileHover={{ x: 80 }}>
           <a
+            href="/WORLD BUSINESS ANGELS INVESTMENT FORUM.pdf"
+            target="_blank"
+            className="has-text-dark"
+          >
+            <p className="heading is-size-6">
+              Strandberg was appointed as International Partner representing
+              Sweden at World Business Angel Investment Forum
+            </p>
+            <hr />
+          </a>
+        </motion.div>
+        <motion.div whileHover={{ x: 80 }}>
+          <a
+            href="/Ethical Response of WBAF to COVID-19.pdf"
+            target="_blank"
+            className="has-text-dark"
+          >
+            <p className="heading is-size-6">
+              Strandberg was appointed as Head of Legal and Regulatory Executive
+              Committee under the Ethics and Standards of Excellence Committee
+              at World Business Angel Investment Forum
+            </p>
+            <hr />
+          </a>
+        </motion.div>
+        <motion.div whileHover={{ x: 80 }}>
+          <a
             href="https://poddtoppen.se/podcast/1161496999/lunchpodden-min-basta-ide/min-basta-ide-leila-falkenberg-och-katarina-strandberg-om-varfor-svenska-kreatorer-ager"
             target="_blank"
             className="has-text-dark"
